@@ -1,11 +1,10 @@
 <section class="p-3">
     <header>
-        <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" [checked]="accordion.IsMandatory">
-            <label class="custom-control-label">
-                <b>{{accordion.CategoyHeading}}</b>
-            </label>
-        </div>
+        <app-switch 
+            [label]="accordion.CategoyHeading"
+            [checked]="accordion.IsMandatory"
+            [name]="accordion.CategoyHeading"
+        ></app-switch>
         <a href="#" (click)="toggleExpansion($event)" class="text-secondary">
             <i class="bi" [class.bi-chevron-up]="isPluginExpanded" [class.bi-chevron-down]="!isPluginExpanded"></i>
         </a>
@@ -27,13 +26,10 @@
                     <span class="text-secondary">{{plugin.ComplianceType}}</span>
                 </li>
                 <li class="py-2">
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" [checked]="plugin.BlockingEnabled">
-                        <label class="custom-control-label"></label>
-                    </div>
+                    <app-switch [checked]="plugin.BlockingEnabled" [name]="plugin.ComplianceType"></app-switch>
                 </li>
                 <li class="py-2">
-                    <a [href]="plugin.PluginDomain" class="text-secondary">Go to site</a>
+                    <a [href]="'//' + plugin.PluginDomain" target="_blank" class="text-secondary">Go to site</a>
                 </li>
             </ng-container>
         </ul>

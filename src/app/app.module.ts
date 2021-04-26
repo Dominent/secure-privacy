@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { CookieBannerComponent } from './components/cookie-banner/cookie-banner.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CookieBannerItemComponent } from './components/cookie-banner-item/cookie-banner-item.component';
+import { SwitchComponent } from './shared/switch/switch.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     CookieBannerComponent,
-    CookieBannerItemComponent
+    CookieBannerItemComponent,
+    SwitchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

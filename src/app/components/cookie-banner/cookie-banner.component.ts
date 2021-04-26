@@ -6,14 +6,11 @@ import { IBannerResponse } from 'src/app/models/banner-response.interface';
   templateUrl: './cookie-banner.component.html',
   styleUrls: ['./cookie-banner.component.css']
 })
-export class CookieBannerComponent implements OnInit {
-  public isBannerExpanded: boolean = true;
+export class CookieBannerComponent {
+  public isBannerExpanded: boolean = false;
 
   @Input()
   public bannerInformation: IBannerResponse;
-
-  public ngOnInit(): void {
-  }
 
   public toggleExpansion($event: MouseEvent) {
     this.isBannerExpanded = !this.isBannerExpanded;

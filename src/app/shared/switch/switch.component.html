@@ -1,0 +1,13 @@
+<div class="custom-control custom-switch">
+    <input 
+        type="checkbox"
+        class="custom-control-input"
+        [(ngModel)]="checked"
+        (ngModelChange)="handleChange($event)"
+        [name]="name"
+        [id]="name"
+    >
+    <label class="custom-control-label" [for]="name">
+        <b>{{label}}</b>
+    </label>
+</div>

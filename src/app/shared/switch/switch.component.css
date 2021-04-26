@@ -1,0 +1,18 @@
+:host {
+    font-size: 14px;
+}
+
+input:checked ~ label::before {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+input,
+label::before,
+label::after {
+    cursor: pointer;
+}
+
+label {
+    user-select: none;
+}

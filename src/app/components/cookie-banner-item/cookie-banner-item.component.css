@@ -35,10 +35,6 @@ header {
     grid-template-rows: 30px;
 }
 
-.card-text {
-    font-size: 14px;
-}
-
 .text-secondary,
 .custom-control-label,
 b {
