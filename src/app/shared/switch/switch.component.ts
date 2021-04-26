@@ -18,7 +18,7 @@ export class SwitchComponent {
   @Output()
   public change: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  public handleChange($event: InputEvent): void {
-   this.change.emit($event.target['value'])
+  public handleChange(isChecked: boolean): void {
+   this.change.emit(isChecked);
   }
 }

@@ -10,4 +10,5 @@ Technologies used:
 
 DEMO: 
 
-![Alt Text](https://media.giphy.com/media/ez4c31UwdUqUWhLGQT/giphy.gif)
+![Alt Text](https://media.giphy.com/media/70CcujoPBMCnnEb61M/giphy.gif)
+![Alt Text](https://media.giphy.com/media/3nr66LcoxIYAiz9D9s/giphy.gif)
