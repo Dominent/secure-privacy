@@ -1,5 +1,9 @@
 <ng-container *ngIf="bannerResponse$ | async as bannerResponse">
-  <main class="mt-5">
-    <app-cookie-banner [bannerInformation]="bannerResponse"></app-cookie-banner>
-  </main>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4 mx-auto p-0">
+        <app-cookie-banner [bannerInformation]="bannerResponse"></app-cookie-banner>
+      </div>
+    </div>
+  </div>
 </ng-container>

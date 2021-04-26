@@ -1,8 +1,9 @@
-<div class="card">
-    <div class="card-header">
-        <h2 class="card-title mb-0 mt-3">Can we store cookies?</h2>
-    </div>
-    <div class="card-body">
+<section>
+    <header class="p-4">
+        <h2 class="card-title m-0">Can we store cookies?</h2>
+    </header>
+
+    <div class="px-4">
         <p class="card-text text-secondary">We and our partners use technologies, such as cookies, and process personal
             data, such as IP addresses and cookie identifiers, to personalize ads and content
             based on your interests, measure the performance of ads and content, and derive
@@ -18,21 +19,22 @@
             <a href="#" class="text-dark ml-1"><b>Privacy Policy</b></a>
         </div>
     </div>
-    <div class="card-footer mb-2">
-        <section>
+
+    <footer class="p-4 mb-2">
+        <div>
             <button class="btn btn-success">Accept All</button>
             <button class="btn btn-outline-secondary ml-3">Save Settings</button>
-        </section>
+        </div>
         <a href="#" class="text-secondary" (click)="toggleExpansion($event)">Customize
             <i class="bi" [class.bi-chevron-up]="isBannerExpanded" [class.bi-chevron-down]="!isBannerExpanded"></i>
         </a>
-    </div>
+    </footer>
 
-    <section class="expandable" [class.expandable--expanded]="isBannerExpanded">
+    <aside class="expandable" [class.expandable--expanded]="isBannerExpanded">
         <ul class="p-4">
             <li class="mb-2" *ngFor="let accordion of bannerInformation.accordian">
-               <app-cookie-banner-item [accordion]="accordion"></app-cookie-banner-item>
+                <app-cookie-banner-item [accordion]="accordion"></app-cookie-banner-item>
             </li>
         </ul>
-    </section>
-</div>
+    </aside>
+</section>

@@ -1,16 +1,18 @@
-<section class="p-4">
+<section class="p-3">
     <header>
         <div class="custom-control custom-switch">
             <input type="checkbox" class="custom-control-input" [checked]="accordion.IsMandatory">
-            <label class="custom-control-label">{{accordion.CategoyHeading}}</label>
+            <label class="custom-control-label">
+                <b>{{accordion.CategoyHeading}}</b>
+            </label>
         </div>
-        <a href="#" (click)="toggleExpansion($event)">
+        <a href="#" (click)="toggleExpansion($event)" class="text-secondary">
             <i class="bi" [class.bi-chevron-up]="isPluginExpanded" [class.bi-chevron-down]="!isPluginExpanded"></i>
         </a>
     </header>
     <div class="expanded" [class.expandable--expanded]="isPluginExpanded">
         <hr>
-        <p>{{accordion.CategoyText}}</p>
+        <p class="text-secondary">{{accordion.CategoyText}}</p>
         <ul>
             <li>
                 <b>Plugins</b>
@@ -21,14 +23,18 @@
             <li>
             </li>
             <ng-container *ngFor="let plugin of accordion.PluginList">
-                <li>{{plugin.ComplianceType}}</li>
-                <li>
+                <li class="py-2">
+                    <span class="text-secondary">{{plugin.ComplianceType}}</span>
+                </li>
+                <li class="py-2">
                     <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" [checked]="plugin.BlockingEnabled">
                         <label class="custom-control-label"></label>
                     </div>
                 </li>
-                <li><a [href]="plugin.PluginDomain">Go to site</a></li>
+                <li class="py-2">
+                    <a [href]="plugin.PluginDomain" class="text-secondary">Go to site</a>
+                </li>
             </ng-container>
         </ul>
     </div>
