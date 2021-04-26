@@ -1,0 +1,36 @@
+section {
+    box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+    background: #fff;
+    border-radius: 2px;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.expanded {
+    height: 0;
+    overflow: hidden;
+}
+
+.expandable--expanded {
+    height: auto;
+    overflow: auto;
+}
+
+.expanded ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    grid-template-rows: 40px;
+}

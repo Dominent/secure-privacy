@@ -1,0 +1,35 @@
+<section class="p-4">
+    <header>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" [checked]="accordion.IsMandatory">
+            <label class="custom-control-label">{{accordion.CategoyHeading}}</label>
+        </div>
+        <a href="#" (click)="toggleExpansion($event)">
+            <i class="bi" [class.bi-chevron-up]="isPluginExpanded" [class.bi-chevron-down]="!isPluginExpanded"></i>
+        </a>
+    </header>
+    <div class="expanded" [class.expandable--expanded]="isPluginExpanded">
+        <hr>
+        <p>{{accordion.CategoyText}}</p>
+        <ul>
+            <li>
+                <b>Plugins</b>
+            </li>
+            <li>
+                <b>Block/Enable</b>
+            </li>
+            <li>
+            </li>
+            <ng-container *ngFor="let plugin of accordion.PluginList">
+                <li>{{plugin.ComplianceType}}</li>
+                <li>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" [checked]="plugin.BlockingEnabled">
+                        <label class="custom-control-label"></label>
+                    </div>
+                </li>
+                <li><a [href]="plugin.PluginDomain">Go to site</a></li>
+            </ng-container>
+        </ul>
+    </div>
+</section>
