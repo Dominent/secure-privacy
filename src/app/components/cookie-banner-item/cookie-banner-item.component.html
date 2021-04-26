@@ -1,9 +1,9 @@
 <section class="p-3">
     <header>
         <app-switch 
-            [label]="accordion.CategoyHeading"
-            [checked]="accordion.IsMandatory"
-            [name]="accordion.CategoyHeading"
+            [label]="accordion?.CategoyHeading"
+            [checked]="accordion?.IsMandatory"
+            [name]="accordion?.CategoyHeading"
         ></app-switch>
         <a href="#" (click)="toggleExpansion($event)" class="text-secondary">
             <i class="bi" [class.bi-chevron-up]="isPluginExpanded" [class.bi-chevron-down]="!isPluginExpanded"></i>
@@ -11,7 +11,7 @@
     </header>
     <div class="expanded" [class.expandable--expanded]="isPluginExpanded">
         <hr>
-        <p class="text-secondary">{{accordion.CategoyText}}</p>
+        <p class="text-secondary">{{accordion?.CategoyText}}</p>
         <ul>
             <li>
                 <b>Plugins</b>
@@ -21,7 +21,7 @@
             </li>
             <li>
             </li>
-            <ng-container *ngFor="let plugin of accordion.PluginList">
+            <ng-container *ngFor="let plugin of accordion?.PluginList">
                 <li class="py-2">
                     <span class="text-secondary">{{plugin.ComplianceType}}</span>
                 </li>
