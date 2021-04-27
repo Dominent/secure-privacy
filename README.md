@@ -1,4 +1,4 @@
-#Simple cookie banner
+# Simple cookie banner
 
 Developed for around 4 hours
 
